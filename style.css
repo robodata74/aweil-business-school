@@ -1,4 +1,30 @@
 /* -------------------------------------------------
+   RESET & BASE STYLES
+---------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* -------------------------------------------------
    HEADER & LOGO
 ---------------------------------------------------*/
 header {
@@ -14,32 +40,225 @@ header {
 }
 
 header .logo {
-    height: 60px; /* reduced from 65px */
-    max-width: 200px; /* ensures it doesn't stretch too much */
+    height: 60px;
+    max-width: 200px;
     object-fit: contain;
 }
 
-/* For homepage, slightly larger but constrained */
 header.home-logo .logo {
     height: 70px;
     max-width: 220px;
 }
 
+.main-nav a {
+    margin-left: 20px;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+    color: #FFD700;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
 /* -------------------------------------------------
-   RESPONSIVE HEADER LOGO
+   HERO SECTION
+---------------------------------------------------*/
+.hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.hero-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-inner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-inner .lead {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-inner .cta .btn {
+    margin: 0 10px;
+}
+
+/* -------------------------------------------------
+   BUTTONS
+---------------------------------------------------*/
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #FFD700;
+    color: #5E1F4C;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+}
+
+.btn-outline {
+    background: none;
+    border: 2px solid #FFD700;
+    color: #FFD700;
+}
+
+.btn-outline:hover {
+    background-color: #FFD700;
+    color: #5E1F4C;
+}
+
+/* -------------------------------------------------
+   ABOUT PREVIEW
+---------------------------------------------------*/
+.about-preview .about-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.about-preview .about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-preview .about-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------------------
+   PROGRAMMES GRID
+---------------------------------------------------*/
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* -------------------------------------------------
+   WHY CHOOSE US
+---------------------------------------------------*/
+.icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.icons-grid .icon {
+    text-align: center;
+    flex: 1 1 180px;
+}
+
+.icons-grid .icon img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* -------------------------------------------------
+   FOOTER
+---------------------------------------------------*/
+.site-footer {
+    background-color: #5E1F4C;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.site-footer small {
+    display: block;
+    margin-top: 5px;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE DESIGN
 ---------------------------------------------------*/
 @media (max-width: 900px) {
-    header .logo,
-    header.home-logo .logo {
-        height: 50px;
-        max-width: 180px;
+    .about-preview .about-grid {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-inner h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-inner .lead {
+        font-size: 1.2rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .cards-grid, .icons-grid {
+        flex-direction: column;
     }
 }
 
 @media (max-width: 600px) {
-    header .logo,
-    header.home-logo .logo {
-        height: 45px;
-        max-width: 160px;
+    .hero-inner h1 {
+        font-size: 2rem;
+    }
+
+    .hero-inner .lead {
+        font-size: 1rem;
     }
 }

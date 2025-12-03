@@ -5,10 +5,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
 }
 
 body {
+    font-family: 'Inter', sans-serif;
     background: #ffffff;
     color: #2A1A2F;
     line-height: 1.6;
@@ -33,17 +33,29 @@ header .logo {
     height: 65px;
 }
 
-header nav a {
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
     color: white;
-    margin-left: 25px;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
 }
 
-header nav a:hover,
-header nav a.active {
+.main-nav a:hover,
+.main-nav a.active {
     color: #FFD700;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
 }
 
 /* -------------------------------------------------
@@ -70,6 +82,7 @@ header nav a.active {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    padding: 0 15px;
 }
 
 .hero-inner h1 {
@@ -79,10 +92,11 @@ header nav a.active {
 }
 
 .hero-inner p.lead {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 25px;
 }
 
+/* CTA BUTTONS */
 .cta .btn {
     display: inline-block;
     padding: 12px 26px;
@@ -122,13 +136,13 @@ header nav a.active {
 
 .about-grid {
     display: flex;
-    flex-wrap: wrap; /* allow wrapping on small screens */
+    flex-wrap: wrap;
     gap: 30px;
     align-items: center;
 }
 
 .about-text {
-    flex: 1 1 400px; /* text takes available space */
+    flex: 1 1 400px;
 }
 
 .about-text h2 {
@@ -141,16 +155,20 @@ header nav a.active {
     margin-bottom: 20px;
 }
 
+.about-text .btn {
+    margin-top: 15px;
+}
+
 .about-image {
-    flex: 1 1 400px; /* image takes available space */
+    flex: 1 1 400px;
     text-align: center;
 }
 
 .about-image img {
     width: 100%;
-    max-width: 500px; /* constrain large image */
+    max-width: 500px;
+    border-radius: 12px;
     height: auto;
-    border-radius: 8px;
 }
 
 /* -------------------------------------------------
@@ -170,14 +188,14 @@ header nav a.active {
 
 .card {
     background: #F8F8F8;
-    padding: 20px;
+    padding: 25px;
     border-radius: 12px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card-icon {
@@ -202,7 +220,7 @@ header nav a.active {
 
 .icon img {
     width: 100%;
-    max-width: 150px; /* constrain oversize icons */
+    max-width: 150px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -238,6 +256,24 @@ footer {
 
     .icons-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+        background: #5E1F4C;
+        padding: 15px;
+        border-radius: 6px;
+    }
+
+    .main-nav.active {
+        display: flex;
     }
 }
 

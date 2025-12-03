@@ -27,10 +27,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
+    flex-wrap: wrap;
 }
 
 header .logo {
-    height: 50px; /* reduced logo size */
+    height: 60px;         /* fixed height */
+    max-width: 200px;     /* prevent stretching */
+    object-fit: contain;
 }
 
 .main-nav {
@@ -97,10 +100,6 @@ header .logo {
     margin-bottom: 25px;
 }
 
-.cta .btn {
-    margin: 5px;
-}
-
 /* -------------------------------------------------
    BUTTONS
 ---------------------------------------------------*/
@@ -136,10 +135,9 @@ header .logo {
 }
 
 /* -------------------------------------------------
-   ABOUT & PROGRAMS SECTIONS
+   ABOUT SECTION
 ---------------------------------------------------*/
-.about-preview,
-.programmes-preview {
+.about-preview {
     padding: 60px 40px;
 }
 
@@ -150,9 +148,18 @@ header .logo {
     align-items: center;
 }
 
-.about-text,
-.programmes-preview .cards-grid {
+.about-text {
     flex: 1 1 400px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #5E1F4C;
+}
+
+.about-text p {
+    margin-bottom: 20px;
 }
 
 .about-image {
@@ -160,11 +167,18 @@ header .logo {
     text-align: center;
 }
 
-.about-image img,
-.cards-grid img {
+.about-image img {
     width: 100%;
     max-width: 500px;
     border-radius: 12px;
+}
+
+/* -------------------------------------------------
+   PROGRAMMES
+---------------------------------------------------*/
+.programmes-preview {
+    padding: 60px 40px;
+    text-align: center;
 }
 
 .cards-grid {
@@ -219,43 +233,54 @@ header .logo {
 }
 
 /* -------------------------------------------------
-   ADMISSION FORM
+   ADMISSION & CONTACT FORMS
 ---------------------------------------------------*/
-.admission-wrapper {
+.admission-wrapper,
+.contact-wrapper {
     display: flex;
     gap: 50px;
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
-.admission-image {
+.admission-image,
+.contact-info {
     flex: 1 1 400px;
     text-align: center;
 }
 
-.admission-image img {
+.admission-image img,
+.contact-info img {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
 }
 
-.admission-form {
+.admission-form,
+.contact-form {
     flex: 1 1 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.admission-form label {
+.admission-form label,
+.contact-form label {
     font-weight: 600;
     color: #5E1F4C;
 }
 
 .admission-form input,
-.admission-form select {
+.admission-form select,
+.contact-form input,
+.contact-form textarea {
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    resize: vertical;
 }
 
 /* -------------------------------------------------
@@ -274,7 +299,8 @@ footer {
 ---------------------------------------------------*/
 @media (max-width: 900px) {
     .about-grid,
-    .admission-wrapper {
+    .admission-wrapper,
+    .contact-wrapper {
         flex-direction: column;
         text-align: center;
     }
@@ -315,4 +341,12 @@ footer {
     .icons-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* -------------------------------------------------
+   HOMEPAGE SPECIFIC LOGO ADJUSTMENT
+---------------------------------------------------*/
+.home-logo .logo {
+    height: 50px;
+    max-width: 180px;
 }

@@ -1,20 +1,4 @@
 /* -------------------------------------------------
-   GLOBAL RESET
----------------------------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background: #ffffff;
-    color: #2A1A2F;
-    line-height: 1.6;
-}
-
-/* -------------------------------------------------
    HEADER
 ---------------------------------------------------*/
 header {
@@ -29,8 +13,27 @@ header {
     z-index: 999;
 }
 
+/* Logo */
 header .logo {
-    height: 65px;
+    height: 50px;        /* Smaller, more balanced height */
+    width: auto;         /* Maintain aspect ratio */
+    max-width: 150px;    /* Prevent excessive width */
+    transition: 0.3s ease;
+}
+
+/* Adjust logo for smaller screens */
+@media (max-width: 900px) {
+    header .logo {
+        height: 45px;
+        max-width: 130px;
+    }
+}
+
+@media (max-width: 600px) {
+    header .logo {
+        height: 40px;
+        max-width: 120px;
+    }
 }
 
 .main-nav {
@@ -59,261 +62,10 @@ header .logo {
     cursor: pointer;
 }
 
-/* -------------------------------------------------
-   HERO SECTION
----------------------------------------------------*/
-.hero {
-    position: relative;
-    width: 100%;
-    height: 75vh;
-    overflow: hidden;
-}
-
-.hero-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(65%);
-}
-
-.hero-inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    padding: 0 15px;
-}
-
-.hero-inner h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
-
-.hero-inner p.lead {
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-}
-
-/* -------------------------------------------------
-   BUTTONS
----------------------------------------------------*/
-.btn,
-.cta .btn {
-    display: inline-block;
-    padding: 12px 26px;
-    border-radius: 6px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background: #FFD700;
-    color: #2A1A2F;
-}
-
-.btn-primary:hover {
-    background: #E6C200;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 2px solid #FFD700;
-    color: #FFD700;
-}
-
-.btn-outline:hover {
-    background: #FFD700;
-    color: #2A1A2F;
-}
-
-/* -------------------------------------------------
-   ABOUT SECTION
----------------------------------------------------*/
-.about-preview {
-    padding: 60px 40px;
-}
-
-.about-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-}
-
-.about-text {
-    flex: 1 1 400px;
-}
-
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #5E1F4C;
-}
-
-.about-text p {
-    margin-bottom: 20px;
-}
-
-.about-image {
-    flex: 1 1 400px;
-    text-align: center;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 12px;
-}
-
-/* -------------------------------------------------
-   PROGRAMMES
----------------------------------------------------*/
-.programmes-preview {
-    padding: 60px 40px;
-    text-align: center;
-}
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.card {
-    background: #F8F8F8;
-    padding: 25px;
-    border-radius: 12px;
-    transition: 0.3s ease;
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.card-icon {
-    width: 80px;
-    margin-bottom: 15px;
-}
-
-/* -------------------------------------------------
-   WHY CHOOSE US
----------------------------------------------------*/
-.why-choose {
-    padding: 60px 40px;
-    text-align: center;
-}
-
-.icons-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.icon img {
-    width: 100%;
-    max-width: 150px;
-    margin-bottom: 10px;
-}
-
-.icon p {
-    font-weight: 600;
-    color: #5E1F4C;
-}
-
-/* -------------------------------------------------
-   ADMISSION & CONTACT FORMS
----------------------------------------------------*/
-.admission-wrapper,
-.contact-wrapper {
-    display: flex;
-    gap: 50px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-}
-
-.admission-image,
-.contact-info {
-    flex: 1 1 400px;
-    text-align: center;
-}
-
-.admission-image img,
-.contact-info img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-.admission-form,
-.contact-form {
-    flex: 1 1 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.admission-form label,
-.contact-form label {
-    font-weight: 600;
-    color: #5E1F4C;
-}
-
-.admission-form input,
-.admission-form select,
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-/* -------------------------------------------------
-   FOOTER
----------------------------------------------------*/
-footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    background: #5E1F4C;
-    color: white;
-}
-
-/* -------------------------------------------------
-   RESPONSIVE
----------------------------------------------------*/
 @media (max-width: 900px) {
-    .about-grid,
-    .admission-wrapper,
-    .contact-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cards-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .icons-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
     .menu-toggle {
         display: block;
     }
-
     .main-nav {
         display: none;
         flex-direction: column;
@@ -323,19 +75,7 @@ footer {
         padding: 15px;
         border-radius: 6px;
     }
-
-    .main-nav.mobile-active {
+    .main-nav.active {
         display: flex;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero-inner h1 {
-        font-size: 2.2rem;
-    }
-
-    .cards-grid,
-    .icons-grid {
-        grid-template-columns: 1fr;
     }
 }

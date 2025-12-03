@@ -324,7 +324,7 @@ footer {
         border-radius: 6px;
     }
 
-    .main-nav.active {
+    .main-nav.mobile-active {
         display: flex;
     }
 }

@@ -19,7 +19,7 @@ body {
 ---------------------------------------------------*/
 header {
     width: 100%;
-    padding: 15px 30px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,13 +27,25 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
-    flex-wrap: wrap;
 }
 
 header .logo {
-    height: 60px;         /* fixed height */
-    max-width: 200px;     /* prevent stretching */
+    height: 65px;
+    max-width: 200px;
     object-fit: contain;
+}
+
+/* HOMEPAGE SPECIFIC LOGO ADJUSTMENT */
+header.home-logo .logo {
+    height: 60px;
+    max-width: 180px;
+}
+
+@media (max-width: 900px) {
+    header.home-logo .logo {
+        height: 50px;
+        max-width: 150px;
+    }
 }
 
 .main-nav {
@@ -341,12 +353,4 @@ footer {
     .icons-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* -------------------------------------------------
-   HOMEPAGE SPECIFIC LOGO ADJUSTMENT
----------------------------------------------------*/
-.home-logo .logo {
-    height: 50px;
-    max-width: 180px;
 }

@@ -42,7 +42,7 @@ header .logo {
     color: white;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .main-nav a:hover,
@@ -100,25 +100,24 @@ header .logo {
 /* -------------------------------------------------
    BUTTONS
 ---------------------------------------------------*/
-.cta .btn,
-.btn {
+.btn,
+.cta .btn {
     display: inline-block;
     padding: 12px 26px;
     border-radius: 6px;
     font-weight: 700;
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease;
     cursor: pointer;
 }
 
 .btn-primary {
     background: #FFD700;
     color: #2A1A2F;
-    border: none;
 }
 
 .btn-primary:hover {
-    background: #e6c200;
+    background: #E6C200;
 }
 
 .btn-outline {
@@ -160,10 +159,6 @@ header .logo {
     margin-bottom: 20px;
 }
 
-.about-text .btn {
-    margin-top: 15px;
-}
-
 .about-image {
     flex: 1 1 400px;
     text-align: center;
@@ -173,11 +168,10 @@ header .logo {
     width: 100%;
     max-width: 500px;
     border-radius: 12px;
-    height: auto;
 }
 
 /* -------------------------------------------------
-   PROGRAMMES SECTION
+   PROGRAMMES
 ---------------------------------------------------*/
 .programmes-preview {
     padding: 60px 40px;
@@ -195,7 +189,8 @@ header .logo {
     background: #F8F8F8;
     padding: 25px;
     border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s ease;
+    text-align: center;
 }
 
 .card:hover {
@@ -209,7 +204,7 @@ header .logo {
 }
 
 /* -------------------------------------------------
-   WHY CHOOSE US SECTION
+   WHY CHOOSE US
 ---------------------------------------------------*/
 .why-choose {
     padding: 60px 40px;
@@ -226,7 +221,6 @@ header .logo {
 .icon img {
     width: 100%;
     max-width: 150px;
-    height: auto;
     margin-bottom: 10px;
 }
 
@@ -236,7 +230,7 @@ header .logo {
 }
 
 /* -------------------------------------------------
-   ADMISSION & CONTACT FORM SECTION
+   ADMISSION & CONTACT FORMS
 ---------------------------------------------------*/
 .admission-wrapper,
 .contact-wrapper {
@@ -256,8 +250,7 @@ header .logo {
 .contact-info img {
     width: 100%;
     max-width: 500px;
-    border-radius: 8px;
-    height: auto;
+    border-radius: 10px;
 }
 
 .admission-form,
@@ -299,7 +292,7 @@ footer {
 }
 
 /* -------------------------------------------------
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ---------------------------------------------------*/
 @media (max-width: 900px) {
     .about-grid,
@@ -341,16 +334,8 @@ footer {
         font-size: 2.2rem;
     }
 
-    .cards-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .cards-grid,
     .icons-grid {
         grid-template-columns: 1fr;
-    }
-
-    .admission-image img,
-    .contact-info img {
-        max-width: 100%;
     }
 }

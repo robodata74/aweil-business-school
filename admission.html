@@ -3,67 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admission – VAD Foundation</title>
+    <title>Admissions - Aweil School of Management & Business</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">VAD FOUNDATION</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="admission.html" class="active">Admission</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.png" alt="School Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="programmes.html">Programmes</a>
+            <a href="admissions.html">Admissions</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-<section class="admission-page">
-    <h1>Student Admission</h1>
-    <p>Apply for enrollment using the form below.</p>
+    <!-- Hero -->
+    <section class="hero">
+        <img src="images/admission-bg.png" class="hero-bg" alt="">
+        <div class="hero-text">
+            <h1>Admissions</h1>
+            <p>Start your journey with Aweil School of Management and Business, Maper East.</p>
+        </div>
+    </section>
 
-    <form class="admission-form" method="POST" action="#">
-        <label>Student Name</label>
-        <input type="text" name="name" required>
+    <!-- Admission Form -->
+    <section class="admission-section">
+        <h2>Student Admission Form</h2>
+        <p>Please fill in the form below to apply for admission.</p>
 
-        <label>Gender</label>
-        <select name="gender" required>
-            <option disabled selected>Select gender</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
+        <form 
+            action="https://formsubmit.co/REPLACE_WITH_FORMSUBMIT_TOKEN"
+            method="POST"
+            class="admission-form"
+        >
 
-        <label>Age</label>
-        <input type="number" name="age" required>
+            <!-- FormSubmit Security -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="New Student Admission">
 
-        <label>Phone Number</label>
-        <input type="tel" name="phone" required>
+            <div class="form-grid">
 
-        <label>Email Address</label>
-        <input type="email" name="email" required>
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="Student Name" required>
+                </div>
 
-        <label>Home Address</label>
-        <textarea name="address" required></textarea>
+                <div class="form-group">
+                    <label>Gender *</label>
+                    <select name="Gender" required>
+                        <option value="">--select--</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Prefer Not to Say</option>
+                    </select>
+                </div>
 
-        <label>Program of Study</label>
-        <select name="program" required>
-            <option disabled selected>Select program</option>
-            <option>Certificate</option>
-            <option>Diploma</option>
-            <option>Professional</option>
-        </select>
+                <div class="form-group">
+                    <label>Age *</label>
+                    <input type="number" name="Age" required>
+                </div>
 
-        <button type="submit" class="submit-btn">Submit Application</button>
-    </form>
-</section>
+                <div class="form-group">
+                    <label>Phone *</label>
+                    <input type="tel" name="Phone" required>
+                </div>
 
-<footer>
-    <p>© 2025 VAD Foundation. All Rights Reserved.</p>
-</footer>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" name="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Address *</label>
+                    <input type="text" name="Address" required>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Programme of Study *</label>
+                    <select name="Programme" required>
+                        <option value="">--choose programme--</option>
+                        <option>Certificate Programme</option>
+                        <option>Diploma Programme</option>
+                        <option>Professional Courses</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn submit-btn">Submit Application</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Aweil School of Management and Business, Maper East, South Sudan</p>
+    </footer>
 
 </body>
 </html>

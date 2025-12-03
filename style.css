@@ -19,7 +19,7 @@ body {
 ---------------------------------------------------*/
 header {
     width: 100%;
-    padding: 15px 30px; /* adjusted padding */
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,8 +30,7 @@ header {
 }
 
 header .logo {
-    height: 50px; /* resized logo */
-    width: auto;
+    height: 50px; /* reduced logo size */
 }
 
 .main-nav {
@@ -98,6 +97,10 @@ header .logo {
     margin-bottom: 25px;
 }
 
+.cta .btn {
+    margin: 5px;
+}
+
 /* -------------------------------------------------
    BUTTONS
 ---------------------------------------------------*/
@@ -133,9 +136,10 @@ header .logo {
 }
 
 /* -------------------------------------------------
-   ABOUT SECTION
+   ABOUT & PROGRAMS SECTIONS
 ---------------------------------------------------*/
-.about-preview {
+.about-preview,
+.programmes-preview {
     padding: 60px 40px;
 }
 
@@ -146,18 +150,9 @@ header .logo {
     align-items: center;
 }
 
-.about-text {
+.about-text,
+.programmes-preview .cards-grid {
     flex: 1 1 400px;
-}
-
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #5E1F4C;
-}
-
-.about-text p {
-    margin-bottom: 20px;
 }
 
 .about-image {
@@ -165,18 +160,11 @@ header .logo {
     text-align: center;
 }
 
-.about-image img {
+.about-image img,
+.cards-grid img {
     width: 100%;
     max-width: 500px;
     border-radius: 12px;
-}
-
-/* -------------------------------------------------
-   PROGRAMMES
----------------------------------------------------*/
-.programmes-preview {
-    padding: 60px 40px;
-    text-align: center;
 }
 
 .cards-grid {
@@ -231,54 +219,43 @@ header .logo {
 }
 
 /* -------------------------------------------------
-   ADMISSION & CONTACT FORMS
+   ADMISSION FORM
 ---------------------------------------------------*/
-.admission-wrapper,
-.contact-wrapper {
+.admission-wrapper {
     display: flex;
     gap: 50px;
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
-.admission-image,
-.contact-info {
+.admission-image {
     flex: 1 1 400px;
     text-align: center;
 }
 
-.admission-image img,
-.contact-info img {
+.admission-image img {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
 }
 
-.admission-form,
-.contact-form {
+.admission-form {
     flex: 1 1 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.admission-form label,
-.contact-form label {
+.admission-form label {
     font-weight: 600;
     color: #5E1F4C;
 }
 
 .admission-form input,
-.admission-form select,
-.contact-form input,
-.contact-form textarea {
+.admission-form select {
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
-}
-
-.contact-form textarea {
-    resize: vertical;
 }
 
 /* -------------------------------------------------
@@ -297,8 +274,7 @@ footer {
 ---------------------------------------------------*/
 @media (max-width: 900px) {
     .about-grid,
-    .admission-wrapper,
-    .contact-wrapper {
+    .admission-wrapper {
         flex-direction: column;
         text-align: center;
     }
@@ -338,9 +314,5 @@ footer {
     .cards-grid,
     .icons-grid {
         grid-template-columns: 1fr;
-    }
-
-    header .logo {
-        height: 40px; /* smaller on small screens */
     }
 }

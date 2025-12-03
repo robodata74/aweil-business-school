@@ -1,307 +1,128 @@
-/* -----------------------------------------------------------
-   GLOBAL RESET & VARIABLES
------------------------------------------------------------ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-:root {
-    --primary-purple: #5E1F4C;
-    --accent-gold: #FFD700;
-    --text-dark: #2A1A2F;
-    --light-bg: #F8F8F8;
-    --max-width: 1200px;
-}
-
-body {
-    background: #ffffff;
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: var(--max-width);
-    margin: auto;
-}
-
-/* -----------------------------------------------------------
-   HEADER
------------------------------------------------------------ */
-header {
-    width: 100%;
-    padding: 20px 40px;
+/* NAVBAR */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--primary-purple);
-}
-
-header .logo {
-    height: 60px;
-}
-
-header nav a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-header nav a:hover,
-header nav .active {
-    color: var(--accent-gold);
-}
-
-/* -----------------------------------------------------------
-   HERO
------------------------------------------------------------ */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 75vh;
-    overflow: hidden;
-}
-
-.hero-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(70%);
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    padding: 20px;
+    background: #002F6C;
     color: white;
 }
 
-.hero-text h1 {
-    font-size: 3.2rem;
-    margin-bottom: 15px;
+.logo {
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
-.hero-text p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: auto;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: var(--accent-gold);
-    color: black;
-    border-radius: 6px;
-    margin-top: 15px;
-    font-weight: 700;
-}
-
-/* -----------------------------------------------------------
-   WHY CHOOSE US
------------------------------------------------------------ */
-.overview {
-    padding: 70px 40px;
-    text-align: center;
-}
-
-.why-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.why-card {
-    background: var(--light-bg);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.why-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-/* -----------------------------------------------------------
-   MISSION SECTION
------------------------------------------------------------ */
-.mission-section {
-    margin-top: 70px;
-    position: relative;
-}
-
-.mission-bg {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    filter: brightness(55%);
-}
-
-.mission-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    max-width: 800px;
-}
-
-/* -----------------------------------------------------------
-   ABOUT PAGE — BANNER
------------------------------------------------------------ */
-.banner {
-    position: relative;
-    width: 100%;
-    height: 50vh;
-    overflow: hidden;
-}
-
-.banner-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(55%);
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-}
-
-/* -----------------------------------------------------------
-   ABOUT CONTENT
------------------------------------------------------------ */
-.about-content {
-    padding: 70px 40px;
-    text-align: center;
-}
-
-.about-content h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.about-card {
-    background: var(--light-bg);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.about-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-.about-card h3 {
-    margin-top: 10px;
-    font-size: 1.3rem;
-}
-
-/* -----------------------------------------------------------
-   ADMISSION FORM SECTION
------------------------------------------------------------ */
-.admission-section {
-    padding: 70px 40px;
-    text-align: center;
-    background: #fafafa;
-}
-
-.admission-form {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 30px;
-    display: grid;
+.nav-links {
+    list-style: none;
+    display: flex;
     gap: 20px;
 }
 
-.admission-form input,
-.admission-form select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    width: 100%;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-.admission-form button {
+.nav-links a.active,
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    background: #003F87;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: white;
+    color: #003F87;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+/* ABOUT & PROGRAMS */
+.about-hero, 
+.programs-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #EEE;
+}
+
+.about-content, .programs-section {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* PROGRAM GRID */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.program-card {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* FORMS */
+.admission-form-section,
+.contact-section,
+.admission-page {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.admission-form,
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admission-form input,
+.admission-form select,
+.admission-form textarea,
+.contact-form input,
+.contact-form textarea {
     padding: 12px;
-    background: var(--primary-purple);
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+.submit-btn {
+    background: #002F6C;
     color: white;
     border: none;
+    padding: 14px;
     border-radius: 6px;
-    font-weight: 700;
+    margin-top: 20px;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.admission-form button:hover {
-    background: var(--accent-gold);
-    color: black;
+.submit-btn:hover {
+    background: #004A99;
 }
 
-/* -----------------------------------------------------------
-   FOOTER
------------------------------------------------------------ */
+/* FOOTER */
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--primary-purple);
+    background: #002F6C;
     color: white;
     margin-top: 40px;
-}
-
-/* -----------------------------------------------------------
-   RESPONSIVE DESIGN
------------------------------------------------------------ */
-@media (max-width: 900px) {
-    .why-grid,
-    .about-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    header nav a {
-        margin: 10px;
-        display: inline-block;
-    }
-
-    .why-grid,
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-text h1 {
-        font-size: 2.4rem;
-    }
 }

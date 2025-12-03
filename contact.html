@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Aweil School of Management and Business</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Aweil School of Management and Business</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
 <header>
-    <img src="images/logo.png" class="logo" alt="School Logo">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="programmes.html">Programmes</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="contact.html" class="active">Contact</a>
-    </nav>
+  <img src="images/logo.png" class="logo" alt="School Logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="admission.html">Admissions</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
 </header>
 
 <section class="page-header">
-    <h1>Contact Us</h1>
+  <h1>Contact Us</h1>
 </section>
 
 <section class="content-section">
-    <h2>Our Address</h2>
-    <p>Maper East, Aweil, South Sudan</p>
+  <div class="contact-container">
 
-    <h2>Send Us a Message</h2>
+    <h2>Get in Touch</h2>
+    <p>If you have questions about admissions, programmes, or general inquiries, please reach out using the form below.</p>
 
+    <!-- CONTACT FORM STARTS HERE -->
     <form action="https://formsubmit.co/el/mogacu" method="POST" class="contact-form">
 
-        <label>Name</label>
-        <input type="text" name="name" required>
+      <!-- Standardized subject for Gmail/Zapier filtering -->
+      <input type="hidden" name="_subject" value="Website Inquiry — Aweil School">
 
-        <label>Email</label>
-        <input type="email" name="email" required>
+      <!-- Disable captcha for smoother user flow -->
+      <input type="hidden" name="_captcha" value="false">
 
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
+      <!-- Box-style email template -->
+      <input type="hidden" name="_template" value="box">
 
-        <button type="submit" class="btn">Send Message</button>
+      <!-- Optional: Thank-you redirect (uncomment if you add thank-you page) -->
+      <!-- <input type="hidden" name="_next" value="https://YOUR-USERNAME.github.io/REPO/thank-you.html"> -->
 
-        <!-- Security -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
+      <label>Your Name</label>
+      <input type="text" name="name" required>
 
+      <label>Your Email</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number (optional)</label>
+      <input type="text" name="phone">
+
+      <label>Your Message</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
     </form>
+    <!-- CONTACT FORM ENDS HERE -->
+
+  </div>
 </section>
 
 <footer>
-    © 2025 Aweil School of Management and Business
+  © 2025 Aweil School of Management and Business
 </footer>
 
 </body>

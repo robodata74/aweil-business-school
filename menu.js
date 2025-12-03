@@ -1,18 +1,19 @@
-// menu.js — mobile nav toggle
+// menu.js — Mobile navigation toggle
+
 function toggleMenu() {
     const nav = document.querySelector('.main-nav');
     if (!nav) return;
 
-    if (nav.style.display === 'block') {
-        nav.style.display = '';
-    } else {
-        nav.style.display = 'block';
-        nav.style.position = 'absolute';
-        nav.style.right = '16px';
-        nav.style.top = '72px';
-        nav.style.background = '#5E1F4C';
-        nav.style.padding = '10px';
-        nav.style.borderRadius = '8px';
-        nav.style.zIndex = '1000';
-    }
+    // Toggle mobile menu class
+    nav.classList.toggle('mobile-active');
 }
+
+// Optional: Hide mobile menu on window resize if wider than 768px
+window.addEventListener('resize', () => {
+    const nav = document.querySelector('.main-nav');
+    if (!nav) return;
+
+    if (window.innerWidth > 768) {
+        nav.classList.remove('mobile-active');
+    }
+});

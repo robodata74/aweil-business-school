@@ -1,16 +1,21 @@
-// menu.js — handles mobile menu toggle and site load logging
-
+// menu.js
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Aweil School website loaded.");
 
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
 
-    if (menuToggle && nav) {
-        menuToggle.addEventListener('click', () => {
-            // Toggle active class for CSS-based mobile menu
-            nav.classList.toggle('active');
+    menuToggle.addEventListener("click", () => {
+        mainNav.classList.toggle("active");
+    });
+
+    // Optional: Close menu when a link is clicked (mobile)
+    const navLinks = document.querySelectorAll(".main-nav a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            if (mainNav.classList.contains("active")) {
+                mainNav.classList.remove("active");
+            }
         });
-    }
+    });
 });

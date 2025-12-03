@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission – VAD Foundation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">VAD FOUNDATION</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="admission.html" class="active">Admission</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="admission-page">
+    <h1>Student Admission</h1>
+    <p>Apply for enrollment using the form below.</p>
+
+    <form class="admission-form" method="POST" action="#">
+        <label>Student Name</label>
+        <input type="text" name="name" required>
+
+        <label>Gender</label>
+        <select name="gender" required>
+            <option disabled selected>Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email" required>
+
+        <label>Home Address</label>
+        <textarea name="address" required></textarea>
+
+        <label>Program of Study</label>
+        <select name="program" required>
+            <option disabled selected>Select program</option>
+            <option>Certificate</option>
+            <option>Diploma</option>
+            <option>Professional</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 VAD Foundation. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

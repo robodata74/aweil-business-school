@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programmes | Aweil School of Management and Business</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programmes | Aweil School of Management and Business</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
 </head>
-
 <body>
-<header>
-    <img src="images/logo.png" class="logo">
-    <nav>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Aweil School Logo" class="logo" />
+      </div>
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="programmes.html" class="active">Programmes</a>
-        <a href="admissions.html">Admissions</a>
+        <a href="programs.html" class="active">Programmes</a>
+        <a href="admission.html">Admissions</a>
         <a href="contact.html">Contact</a>
-    </nav>
-</header>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
 
-<section class="page-header">
+  <!-- PAGE HEADER -->
+  <section class="page-header container">
     <h1>Programmes Offered</h1>
-</section>
+  </section>
 
-<section class="programme-grid">
-    <div class="programme-card">
-        <img src="images/programme1.png">
+  <!-- PROGRAMMES GRID -->
+  <section class="programmes-preview container">
+    <div class="cards-grid">
+      <article class="card">
+        <img src="images/programmes-certificate.png" alt="Certificate Programme" class="card-icon" loading="lazy">
         <h3>Certificate Programmes</h3>
         <p>Short-term foundational courses designed for beginners and entry-level learners.</p>
-    </div>
+      </article>
 
-    <div class="programme-card">
-        <img src="images/programme2.png">
+      <article class="card">
+        <img src="images/diploma-business-management.png" alt="Diploma Programme" class="card-icon" loading="lazy">
         <h3>Diploma Programmes</h3>
         <p>Comprehensive 1–2 year courses focusing on practical skills and leadership.</p>
-    </div>
+      </article>
 
-    <div class="programme-card">
-        <img src="images/programme3.png">
+      <article class="card">
+        <img src="images/prof-entrepreneurship.png" alt="Professional Programme" class="card-icon" loading="lazy">
         <h3>Professional Programmes</h3>
         <p>Advanced programmes for career acceleration and corporate specialization.</p>
+      </article>
     </div>
-</section>
+  </section>
 
-<footer>
-    © 2025 Aweil School of Management and Business
-</footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Aweil School of Management and Business — Maper East, South Sudan</p>
+      <small>Contact: 0925884118 • admissions (hidden)</small>
+    </div>
+  </footer>
 
+  <script src="menu.js"></script>
 </body>
 </html>

@@ -56,6 +56,7 @@ header .logo {
     background: none;
     border: none;
     color: white;
+    cursor: pointer;
 }
 
 /* -------------------------------------------------
@@ -96,20 +97,24 @@ header .logo {
     margin-bottom: 25px;
 }
 
-/* CTA BUTTONS */
-.cta .btn {
+/* -------------------------------------------------
+   BUTTONS
+---------------------------------------------------*/
+.cta .btn,
+.btn {
     display: inline-block;
     padding: 12px 26px;
     border-radius: 6px;
     font-weight: 700;
     text-decoration: none;
-    margin: 0 8px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .btn-primary {
     background: #FFD700;
     color: #2A1A2F;
+    border: none;
 }
 
 .btn-primary:hover {
@@ -231,6 +236,47 @@ header .logo {
 }
 
 /* -------------------------------------------------
+   ADMISSION FORM SECTION
+---------------------------------------------------*/
+.admission-wrapper {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.admission-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.admission-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    height: auto;
+}
+
+.admission-form {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admission-form label {
+    font-weight: 600;
+    color: #5E1F4C;
+}
+
+.admission-form input,
+.admission-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* -------------------------------------------------
    FOOTER
 ---------------------------------------------------*/
 footer {
@@ -275,6 +321,11 @@ footer {
     .main-nav.active {
         display: flex;
     }
+
+    .admission-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -288,5 +339,9 @@ footer {
 
     .icons-grid {
         grid-template-columns: 1fr;
+    }
+
+    .admission-image img {
+        max-width: 100%;
     }
 }

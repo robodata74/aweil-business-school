@@ -1,5 +1,5 @@
 /* -------------------------------------------------
-   GLOBAL RESET 
+   GLOBAL RESET
 ---------------------------------------------------*/
 * {
     margin: 0;
@@ -236,44 +236,55 @@ header .logo {
 }
 
 /* -------------------------------------------------
-   ADMISSION FORM SECTION
+   ADMISSION & CONTACT FORM SECTION
 ---------------------------------------------------*/
-.admission-wrapper {
+.admission-wrapper,
+.contact-wrapper {
     display: flex;
     gap: 50px;
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
-.admission-image {
+.admission-image,
+.contact-info {
     flex: 1 1 400px;
     text-align: center;
 }
 
-.admission-image img {
+.admission-image img,
+.contact-info img {
     width: 100%;
     max-width: 500px;
     border-radius: 8px;
     height: auto;
 }
 
-.admission-form {
+.admission-form,
+.contact-form {
     flex: 1 1 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.admission-form label {
+.admission-form label,
+.contact-form label {
     font-weight: 600;
     color: #5E1F4C;
 }
 
 .admission-form input,
-.admission-form select {
+.admission-form select,
+.contact-form input,
+.contact-form textarea {
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    resize: vertical;
 }
 
 /* -------------------------------------------------
@@ -291,7 +302,9 @@ footer {
    RESPONSIVE DESIGN
 ---------------------------------------------------*/
 @media (max-width: 900px) {
-    .about-grid {
+    .about-grid,
+    .admission-wrapper,
+    .contact-wrapper {
         flex-direction: column;
         text-align: center;
     }
@@ -321,11 +334,6 @@ footer {
     .main-nav.active {
         display: flex;
     }
-
-    .admission-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 @media (max-width: 600px) {
@@ -341,7 +349,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .admission-image img {
+    .admission-image img,
+    .contact-info img {
         max-width: 100%;
     }
 }

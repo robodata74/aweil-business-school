@@ -9,11 +9,11 @@
 </head>
 <body>
 
-  <!-- HEADER / NAVIGATION -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="images/logo.png" class="logo" alt="Aweil School Logo" />
+        <img src="images/logo.png" alt="Aweil School Logo" class="logo" />
       </div>
       <nav class="main-nav">
         <a href="index.html">Home</a>
@@ -26,21 +26,19 @@
     </div>
   </header>
 
-  <!-- BANNER IMAGE -->
-  <section class="admissions-banner container">
-    <img src="images/admissions-banner.png" alt="Admissions Banner" class="banner-img" loading="lazy">
-  </section>
-
-  <!-- PAGE HEADER -->
-  <section class="page-header container">
-    <h1>Student Admission Form</h1>
+  <!-- HERO BANNER -->
+  <section class="hero" aria-label="Admissions Hero">
+    <img src="images/admissions-banner.png" alt="Admissions Banner" class="hero-bg" />
+    <div class="hero-inner container">
+      <h1>Admissions</h1>
+      <p class="lead">Start your journey with Aweil School of Management and Business.</p>
+    </div>
   </section>
 
   <!-- ADMISSION FORM -->
   <section class="content-section container">
+    <h2>Register for Admission</h2>
     <form action="https://formsubmit.co/el/mogacu" method="POST" class="admission-form">
-      <h2>Register for Admission</h2>
-
       <input type="hidden" name="_subject" value="New Student Admission — Aweil School">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
@@ -76,7 +74,7 @@
         <option>Professional</option>
       </select>
 
-      <button type="submit" class="btn">Submit Application</button>
+      <button type="submit" class="btn btn-primary">Submit Application</button>
     </form>
   </section>
 

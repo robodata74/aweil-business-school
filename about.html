@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Aweil School of Management & Business</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <img src="images/logo.png" class="logo" alt="School Logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- About Banner -->
+<section class="banner">
+    <img src="images/about-banner.png" class="banner-bg" alt="About Banner">
+    <div class="banner-text">
+        <h1>About Our Institution</h1>
+        <p>Building future leaders through quality education.</p>
+    </div>
+</section>
+
+<!-- About Content -->
+<section class="about-content">
+    <h2>Who We Are</h2>
+    <p>
+        Aweil School of Management & Business is committed to providing high-quality education in business,
+        leadership, and management. Our mission is to empower young people in South Sudan with skills that
+        prepare them for modern workplaces and entrepreneurship opportunities.
+    </p>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            <img src="images/value-integrity.png" alt="">
+            <h3>Integrity & Excellence</h3>
+            <p>We instill strong values, professionalism, and ethical leadership in all our programs.</p>
+        </div>
+
+        <div class="about-card">
+            <img src="images/vision-background-4k.png" alt="">
+            <h3>Our Vision</h3>
+            <p>To be the leading business and management training institution in South Sudan.</p>
+        </div>
+
+        <div class="about-card">
+            <img src="images/leadership-governance-4k.png" alt="">
+            <h3>Leadership</h3>
+            <p>Our leadership team ensures the highest standards of learning and student success.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Admission Form Section -->
+<section class="admission-section">
+    <h2>Student Admission Form</h2>
+    <p>Apply now to join our Certificate, Diploma, or Professional programs.</p>
+
+    <form class="admission-form" method="POST" action="https://formsubmit.co/info@vadfoundation.org">
+        
+        <!-- invisible settings -->
+        <input type="hidden" name="_subject" value="New Student Admission Request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="box">
+
+        <label>Full Name</label>
+        <input type="text" name="Student Name" required>
+
+        <label>Gender</label>
+        <select name="Gender" required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <label>Age</label>
+        <input type="number" name="Age" min="12" max="80" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="Phone" required>
+
+        <label>Email</label>
+        <input type="email" name="Email" required>
+
+        <label>Address</label>
+        <input type="text" name="Address" required>
+
+        <label>Program of Study</label>
+        <select name="Program of Study" required>
+            <option value="">Select Program</option>
+            <option>Certificate</option>
+            <option>Diploma</option>
+            <option>Professional Course</option>
+        </select>
+
+        <button type="submit" class="btn">Submit Application</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Aweil School of Management & Business Studies — Maper East, South Sudan.</p>
+</footer>
+
+</body>
+</html>
 

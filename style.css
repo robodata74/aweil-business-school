@@ -1,118 +1,229 @@
-/* style.css — Blend: Purple (#5E1F4C) + Gold (#F7D116) + flag accents */
-/* Commit message: style: update site-wide responsive styles (purple+gold + flag accents) */
-
-/* VARIABLES */
-:root{
-  --purple: #5E1F4C;
-  --gold: #F7D116;
-  --blue-flag: #003B5C;
-  --red-flag: #D21034;
-  --green-flag: #078930;
-  --text: #222222;
-  --muted: #f5f6f8;
-  --max-w: 1200px;
+/* -------------------------------------------------
+   GLOBAL RESET 
+---------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-/* RESET */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:var(--text); background:#fff; -webkit-font-smoothing:antialiased;}
-
-/* CONTAINER */
-.container{width:92%;max-width:var(--max-w);margin:0 auto}
-
-/* NAV */
-.header{
-  background:linear-gradient(180deg, rgba(94,31,76,0.98) 0%, rgba(94,31,76,0.98) 100%);
-  color:#fff;
-}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{display:flex;align-items:center;gap:14px}
-.brand .logo{height:64px}
-.main-nav{display:flex;gap:18px;align-items:center}
-.main-nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:6px}
-.main-nav a:hover,.main-nav a.active{background:rgba(247,209,22,0.12);color:var(--gold)}
-
-/* MOBILE MENU */
-.menu-toggle{display:none;background:transparent;border:0;color:#fff;font-size:24px}
-.mobile-nav{display:none}
-
-/* HERO */
-.hero{position:relative;min-height:66vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:#111}
-.hero .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.55)}
-.hero .hero-inner{position:relative;z-index:2;padding:48px 16px}
-.hero h1{font-size:2.6rem;line-height:1.05;margin-bottom:12px;font-weight:800}
-.hero p.lead{font-size:1.05rem;max-width:900px;margin:0 auto 18px;color:rgba(255,255,255,0.92)}
-.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.btn{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700}
-.btn-primary{background:var(--gold);color:#111}
-.btn-outline{background:transparent;border:2px solid rgba(255,255,255,0.18);color:#fff}
-
-/* ABOUT PREVIEW */
-.about-preview{padding:56px 0}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-.about-text h2{font-size:1.6rem;margin-bottom:10px;color:var(--purple)}
-.about-text p{color:#333;line-height:1.6}
-.about-image img{width:100%;border-radius:8px;display:block}
-
-/* PROGRAMMES */
-.programmes-preview{padding:56px 0;background:var(--muted)}
-.programmes-preview h2{margin-bottom:18px}
-.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.06);text-align:center}
-.card-icon{height:84px;margin-bottom:12px}
-
-/* WHY CHOOSE US */
-.why-choose{padding:56px 0}
-.icons-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start;text-align:center}
-.icon img{height:92px;margin:0 auto 12px;display:block}
-.icon p{font-weight:600;color:#222}
-
-/* MISSION / VISION */
-.mission{position:relative;padding:56px 0}
-.mission .bg{width:100%;height:340px;object-fit:cover;filter:brightness(0.5);border-radius:8px}
-.mission .inner{position:relative;margin-top:-160px;background:rgba(255,255,255,0.95);padding:28px;border-radius:8px;box-shadow:0 12px 30px rgba(11,11,11,0.08)}
-
-/* ADMISSION FORM (separate page may use same) */
-.admission-section{padding:56px 0;background:#fafafa}
-.admission-form{max-width:720px;margin:0 auto;display:grid;gap:12px;padding:18px 16px}
-.admission-form label{font-weight:600;font-size:0.95rem}
-.admission-form input, .admission-form select, .admission-form textarea{
-  padding:12px;border-radius:8px;border:1px solid #ddd;font-size:1rem;
-}
-.admission-form textarea{min-height:110px;resize:vertical}
-.admission-form .submit{background:var(--purple);color:#fff;padding:12px;border-radius:8px;border:0;font-weight:700}
-.admission-form .submit:hover{background:var(--gold);color:#111;transition:all .18s ease}
-
-/* CONTACT */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;padding:36px 0}
-.map-img{width:100%;height:360px;object-fit:cover;border-radius:8px}
-
-/* FOOTER */
-.site-footer{background:var(--purple);color:#fff;padding:20px 0;text-align:center;margin-top:42px}
-.site-footer small{opacity:0.92}
-
-/* UTILITIES */
-.row{display:flex;gap:18px;flex-wrap:wrap}
-.center{text-align:center}
-
-/* RESPONSIVE */
-@media (max-width:980px){
-  .cards-grid{grid-template-columns:repeat(2,1fr)}
-  .why-grid{grid-template-columns:repeat(2,1fr)}
-  .about-grid{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .hero h1{font-size:2rem}
-  .hero p.lead{font-size:0.98rem}
-  .menu-toggle{display:block}
-  .main-nav{display:none}
-  .mobile-nav{display:block}
+body {
+    background: #ffffff;
+    color: #2A1A2F;
+    line-height: 1.6;
 }
 
-@media (max-width:620px){
-  .cards-grid{grid-template-columns:1fr}
-  .icons-grid{grid-template-columns:1fr}
-  .brand .logo{height:56px}
-  .hero{min-height:54vh}
-  .hero h1{font-size:1.6rem}
+/* -------------------------------------------------
+   HEADER
+---------------------------------------------------*/
+header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #5E1F4C;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header .logo {
+    height: 65px;
+}
+
+header nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #FFD700;
+}
+
+/* -------------------------------------------------
+   HERO SECTION
+---------------------------------------------------*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(65%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #FFD700;
+    color: black;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------
+   WHY SECTION
+---------------------------------------------------*/
+.overview {
+    padding: 70px 40px;
+    text-align: center;
+}
+
+.why-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.why-card {
+    background: #F8F8F8;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.why-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* -------------------------------------------------
+   MISSION SECTION
+---------------------------------------------------*/
+.mission-section {
+    margin-top: 70px;
+    position: relative;
+}
+
+.mission-bg {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.mission-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+/* -------------------------------------------------
+   ADMISSIONFORM
+---------------------------------------------------*/
+.admission-section {
+    padding: 60px 40px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.admission-form {
+    margin-top: 30px;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #5E1F4C;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.submit-btn {
+    margin-top: 25px;
+    background: #5E1F4C;
+    color: #FFD700;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+}
+
+/* -------------------------------------------------
+   FOOTER
+---------------------------------------------------*/
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #5E1F4C;
+    color: white;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE DESIGN
+---------------------------------------------------*/
+@media (max-width: 900px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
 }

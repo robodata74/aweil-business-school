@@ -1,72 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us | Aweil School of Management and Business</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Aweil School of Management & Business</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
 </head>
-
 <body>
 
-<header>
-  <img src="images/logo.png" class="logo" alt="School Logo" />
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programmes.html">Programmes</a>
-    <a href="admission.html">Admissions</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Aweil School Logo" class="logo">
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programmes</a>
+        <a href="admission.html">Admissions</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
 
-<section class="page-header">
-  <h1>Contact Us</h1>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/contact-hero.png" alt="Contact Banner" class="hero-bg">
+    <div class="hero-inner container">
+      <h1>Contact Us</h1>
+      <p class="lead">We’re here to help. Reach out to us with your queries or feedback.</p>
+    </div>
+  </section>
 
-<section class="content-section">
-  <div class="contact-container">
-
+  <!-- CONTACT INFO + FORM -->
+  <section class="content-section container">
     <h2>Get in Touch</h2>
-    <p>If you have questions about admissions, programmes, or general inquiries, please reach out using the form below.</p>
+    <div class="contact-wrapper">
 
-    <!-- CONTACT FORM STARTS HERE -->
-    <form action="https://formsubmit.co/el/mogacu" method="POST" class="contact-form">
+      <!-- Left: Info -->
+      <div class="contact-info">
+        <div class="info-item">
+          <img src="images/icon-location.png" alt="Location Icon">
+          <p>Maper East, South Sudan</p>
+        </div>
+        <div class="info-item">
+          <img src="images/icon-phone.png" alt="Phone Icon">
+          <p>+211 925 884 118</p>
+        </div>
+        <div class="info-item">
+          <img src="images/icon-email.png" alt="Email Icon">
+          <p>admissions@asmb.edu.ss</p>
+        </div>
+      </div>
 
-      <!-- Standardized subject for Gmail/Zapier filtering -->
-      <input type="hidden" name="_subject" value="Website Inquiry — Aweil School">
+      <!-- Right: Form -->
+      <form action="https://formsubmit.co/el/mogacu" method="POST" class="contact-form">
+        <input type="hidden" name="_subject" value="New Contact Message — Aweil School">
+        <input type="hidden" name="_captcha" value="false">
 
-      <!-- Disable captcha for smoother user flow -->
-      <input type="hidden" name="_captcha" value="false">
+        <label>Full Name</label>
+        <input type="text" name="name" required>
 
-      <!-- Box-style email template -->
-      <input type="hidden" name="_template" value="box">
+        <label>Email</label>
+        <input type="email" name="email" required>
 
-      <!-- Optional: Thank-you redirect (uncomment if you add thank-you page) -->
-      <!-- <input type="hidden" name="_next" value="https://YOUR-USERNAME.github.io/REPO/thank-you.html"> -->
+        <label>Phone</label>
+        <input type="tel" name="phone">
 
-      <label>Your Name</label>
-      <input type="text" name="name" required>
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
 
-      <label>Your Email</label>
-      <input type="email" name="email" required>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-      <label>Phone Number (optional)</label>
-      <input type="text" name="phone">
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Aweil School of Management & Business — Maper East, South Sudan</p>
+      <small>Contact: 0925884118 • admissions@asmb.edu.ss</small>
+    </div>
+  </footer>
 
-      <label>Your Message</label>
-      <textarea name="message" rows="5" required></textarea>
-
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <!-- CONTACT FORM ENDS HERE -->
-
-  </div>
-</section>
-
-<footer>
-  © 2025 Aweil School of Management and Business
-</footer>
-
+  <script src="menu.js"></script>
 </body>
 </html>

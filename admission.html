@@ -3,106 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions - Aweil School of Management & Business</title>
+    <title>Admissions | Aweil School of Management and Business</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<header>
+    <img src="images/logo.png" class="logo">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programmes.html">Programmes</a>
+        <a href="admissions.html" class="active">Admissions</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <!-- Header -->
-    <header>
-        <img src="images/logo.png" alt="School Logo" class="logo">
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="programmes.html">Programmes</a>
-            <a href="admissions.html">Admissions</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<section class="page-header">
+    <h1>Student Admission Form</h1>
+</section>
 
-    <!-- Hero -->
-    <section class="hero">
-        <img src="images/admission-bg.png" class="hero-bg" alt="">
-        <div class="hero-text">
-            <h1>Admissions</h1>
-            <p>Start your journey with Aweil School of Management and Business, Maper East.</p>
-        </div>
-    </section>
+<section class="content-section">
 
-    <!-- Admission Form -->
-    <section class="admission-section">
-        <h2>Student Admission Form</h2>
-        <p>Please fill in the form below to apply for admission.</p>
+<form action="https://formsubmit.co/REPLACE_WITH_FORMSUBMIT_TOKEN" method="POST" class="admission-form">
 
-        <form 
-            action="https://formsubmit.co/REPLACE_WITH_FORMSUBMIT_TOKEN"
-            method="POST"
-            class="admission-form"
-        >
+    <h2>Register for Admission</h2>
 
-            <!-- FormSubmit Security -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_subject" value="New Student Admission">
+    <label>Full Name</label>
+    <input type="text" name="student_name" required>
 
-            <div class="form-grid">
+    <label>Gender</label>
+    <select name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Prefer not to say</option>
+    </select>
 
-                <div class="form-group">
-                    <label>Full Name *</label>
-                    <input type="text" name="Student Name" required>
-                </div>
+    <label>Age</label>
+    <input type="number" name="age" required>
 
-                <div class="form-group">
-                    <label>Gender *</label>
-                    <select name="Gender" required>
-                        <option value="">--select--</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Prefer Not to Say</option>
-                    </select>
-                </div>
+    <label>Phone</label>
+    <input type="text" name="phone" required>
 
-                <div class="form-group">
-                    <label>Age *</label>
-                    <input type="number" name="Age" required>
-                </div>
+    <label>Email</label>
+    <input type="email" name="email" required>
 
-                <div class="form-group">
-                    <label>Phone *</label>
-                    <input type="tel" name="Phone" required>
-                </div>
+    <label>Address</label>
+    <input type="text" name="address" required>
 
-                <div class="form-group">
-                    <label>Email *</label>
-                    <input type="email" name="Email" required>
-                </div>
+    <label>Programme of Study</label>
+    <select name="program" required>
+        <option value="">Select Programme</option>
+        <option>Certificate</option>
+        <option>Diploma</option>
+        <option>Professional</option>
+    </select>
 
-                <div class="form-group">
-                    <label>Address *</label>
-                    <input type="text" name="Address" required>
-                </div>
+    <button type="submit" class="btn">Submit Application</button>
 
-                <div class="form-group full-width">
-                    <label>Programme of Study *</label>
-                    <select name="Programme" required>
-                        <option value="">--choose programme--</option>
-                        <option>Certificate Programme</option>
-                        <option>Diploma Programme</option>
-                        <option>Professional Courses</option>
-                    </select>
-                </div>
+    <!-- Protect against spam -->
+    <input type="hidden" name="_captcha" value="false">
 
-            </div>
+</form>
 
-            <button type="submit" class="btn submit-btn">Submit Application</button>
+</section>
 
-        </form>
-    </section>
-
-    <footer>
-        <p>© 2025 Aweil School of Management and Business, Maper East, South Sudan</p>
-    </footer>
+<footer>
+    © 2025 Aweil School of Management and Business
+</footer>
 
 </body>
 </html>

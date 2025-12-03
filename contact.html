@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – VAD Foundation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Aweil School</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">VAD FOUNDATION</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="admission.html">Admission</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+  <header class="header">
+    <div class="container header-inner">
+      <img src="images/logo.png" alt="Logo" class="logo" />
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
 
-<section class="contact-section">
-    <h1>Contact Us</h1>
-    <p>Reach out for inquiries, partnerships, or support.</p>
+  <main class="container">
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <div class="contact-grid">
+        <div>
+          <img src="images/contact-map-aweil.png" alt="Map" class="map-img" />
+          <p><strong>Address:</strong> Maper East, Aweil, South Sudan</p>
+          <p><strong>Phone:</strong> 0925884118</p>
+        </div>
 
-    <form class="contact-form" method="POST" action="#">
-        <label>Your Name</label>
-        <input type="text" name="name" required>
+        <div>
+          <h3>Send an enquiry</h3>
+          <form class="contact-form" method="POST" action="https://formsubmit.co/REPLACE_WITH_FORMSUBMIT_TOKEN">
+            <input type="hidden" name="_subject" value="Website Inquiry — Aweil School">
+            <input type="hidden" name="_captcha" value="false">
+            <label>Your Name</label>
+            <input type="text" name="Name" required>
+            <label>Your Email</label>
+            <input type="email" name="Email" required>
+            <label>Message</label>
+            <textarea name="Message" required></textarea>
+            <button class="submit-btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <label>Email Address</label>
-        <input type="email" name="email" required>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Aweil School of Management & Business Studies</p>
+    </div>
+  </footer>
 
-        <label>Message</label>
-        <textarea name="message" required></textarea>
-
-        <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2025 VAD Foundation. All Rights Reserved.</p>
-</footer>
-
+  <script src="menu.js"></script>
 </body>
 </html>
-

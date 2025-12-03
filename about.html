@@ -1,85 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About – VAD Foundation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Aweil School of Management & Business Studies</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">VAD FOUNDATION</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="admission.html">Admission</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="programs.html">Programs</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
 
-<section class="about-hero">
-    <h1>About VAD Foundation</h1>
-    <p>Committed to transforming lives through educational empowerment.</p>
-</section>
+  <section class="banner">
+    <img src="images/about-banner.png" alt="" class="banner-bg" />
+    <div class="banner-text container">
+      <h1>About the Pioneer School</h1>
+      <p>We train transformational management and business professionals for South Sudan.</p>
+    </div>
+  </section>
 
-<section class="about-content">
+  <section class="about-content container">
     <h2>Who We Are</h2>
-    <p>The VAD Foundation equips communities through structured training and development programs.</p>
+    <p>The Pioneer School of Management and Business Studies aims to become a leading institution in South Sudan, committed to promoting educational excellence and sustainable development within its communities.</p>
 
-    <h2>Mission</h2>
-    <p>To provide accessible, skill-based education that uplifts marginalized communities.</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <img src="images/value-integrity.png" alt="Integrity">
+        <h3>Integrity & Quality</h3>
+        <p>We uphold strong values and high teaching standards.</p>
+      </div>
 
-    <h2>Vision</h2>
-    <p>To empower individuals with practical knowledge that propels personal and societal growth.</p>
-</section>
+      <div class="about-card">
+        <img src="images/leadership-governance-4k.png" alt="Leadership">
+        <h3>Leadership</h3>
+        <p>Experienced administrators and academic leaders guide our curriculum.</p>
+      </div>
 
-<section class="admission-form-section">
-    <h2>New Student Admission Form</h2>
-    <p>Please fill in all required fields.</p>
+      <div class="about-card">
+        <img src="images/community-engagement-4k.png" alt="Community">
+        <h3>Community Impact</h3>
+        <p>We partner with local organizations to support community development projects.</p>
+      </div>
+    </div>
+  </section>
 
-    <form class="admission-form" method="POST" action="#">
-        <label>Student Name</label>
-        <input type="text" name="name" required>
+  <section class="admission-section container">
+    <h2>Apply to join us</h2>
+    <p>Use our online admission form to apply for Certificate, Diploma or Professional programmes.</p>
+    <a class="btn btn-primary" href="admissions.html">Apply Now</a>
+  </section>
 
-        <label>Gender</label>
-        <select name="gender" required>
-            <option value="" disabled selected>Select gender</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Aweil School of Management & Business Studies — Maper East, South Sudan</p>
+    </div>
+  </footer>
 
-        <label>Age</label>
-        <input type="number" name="age" required>
-
-        <label>Phone Number</label>
-        <input type="tel" name="phone" required>
-
-        <label>Email Address</label>
-        <input type="email" name="email" required>
-
-        <label>Home Address</label>
-        <textarea name="address" required></textarea>
-
-        <label>Program of Study</label>
-        <select name="program" required>
-            <option disabled selected>Select program</option>
-            <option>Certificate</option>
-            <option>Diploma</option>
-            <option>Professional</option>
-        </select>
-
-        <button type="submit" class="submit-btn">Submit Application</button>
-    </form>
-</section>
-
-<footer>
-    <p>© 2025 VAD Foundation. All Rights Reserved.</p>
-</footer>
-
+  <script src="menu.js"></script>
 </body>
 </html>

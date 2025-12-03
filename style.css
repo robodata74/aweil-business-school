@@ -45,13 +45,11 @@ header .logo {
     object-fit: contain;
 }
 
-/* For homepage, slightly larger but constrained */
 header.home-logo .logo {
     height: 70px;
     max-width: 220px;
 }
 
-/* Navigation Links */
 .main-nav a {
     color: #fff;
     margin-left: 20px;
@@ -64,7 +62,6 @@ header.home-logo .logo {
     color: #FFD700;
 }
 
-/* Menu toggle for mobile */
 .menu-toggle {
     display: none;
     background: none;
@@ -98,6 +95,10 @@ header.home-logo .logo {
 }
 
 .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     color: #fff;
     max-width: 1000px;
@@ -159,15 +160,9 @@ header.home-logo .logo {
     gap: 30px;
 }
 
-/* About Section */
 .about-grid {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-items: center; /* centers images horizontally */
-}
-
-.about-text {
-    text-align: left; /* text stays left-aligned */
 }
 
 .about-text h2 {
@@ -185,7 +180,6 @@ header.home-logo .logo {
     margin: 0 auto;
 }
 
-/* Programs Section */
 .cards-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -205,10 +199,8 @@ header.home-logo .logo {
 
 .card-icon {
     width: 80px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .card h3 {
@@ -216,18 +208,21 @@ header.home-logo .logo {
     margin-bottom: 10px;
 }
 
-/* Why Choose Us Section */
 .icons-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     text-align: center;
 }
 
+.icons-grid .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .icons-grid .icon img {
     width: 80px;
     margin-bottom: 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* =================================================
@@ -267,10 +262,6 @@ header.home-logo .logo {
 
     .about-grid {
         grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .about-text {
         text-align: center;
     }
 

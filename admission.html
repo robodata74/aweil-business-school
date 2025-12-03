@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admissions | Aweil School of Management and Business</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admissions | Aweil School of Management and Business</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 <header>
-    <img src="images/logo.png" class="logo" alt="School Logo">
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="programmes.html">Programmes</a>
-        <a href="admissions.html" class="active">Admissions</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <img src="images/logo.png" class="logo" alt="School Logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programmes.html">Programmes</a>
+    <a href="admission.html" class="active">Admissions</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
 <section class="page-header">
-    <h1>Student Admission Form</h1>
+  <h1>Student Admission Form</h1>
 </section>
 
 <section class="content-section">
-
-<form action="https://formsubmit.co/el/mogacu" method="POST" class="admission-form">
-
+  <form action="https://formsubmit.co/el/mogacu" method="POST" class="admission-form">
     <h2>Register for Admission</h2>
 
+    <!-- Standardise subject so filters can pick it up -->
+    <input type="hidden" name="_subject" value="New Student Admission — Aweil School">
+
+    <!-- Form fields -->
     <label>Full Name</label>
     <input type="text" name="student_name" required>
 
     <label>Gender</label>
     <select name="gender" required>
-        <option value="">Select</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Prefer not to say</option>
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Prefer not to say</option>
     </select>
 
     <label>Age</label>
     <input type="number" name="age" required>
 
     <label>Phone</label>
-    <input type="text" name="phone" required>
+    <input type="tel" name="phone" required>
 
     <label>Email</label>
     <input type="email" name="email" required>
@@ -54,25 +55,21 @@
 
     <label>Programme of Study</label>
     <select name="program" required>
-        <option value="">Select Programme</option>
-        <option>Certificate</option>
-        <option>Diploma</option>
-        <option>Professional</option>
+      <option value="">Select Programme</option>
+      <option>Certificate</option>
+      <option>Diploma</option>
+      <option>Professional</option>
     </select>
 
     <button type="submit" class="btn">Submit Application</button>
 
-    <!-- Protection -->
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="box">
-
-</form>
-
+  </form>
 </section>
 
 <footer>
-    © 2025 Aweil School of Management and Business
+  © 2025 Aweil School of Management and Business
 </footer>
-
 </body>
 </html>

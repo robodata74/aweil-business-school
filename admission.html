@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admission | Aweil School of Management & Business Studies</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
 </head>
-
 <body>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <!-- Brand -->
       <div class="brand">
         <img src="images/logo.png" alt="Aweil School Logo" class="logo">
       </div>
-
-      <!-- Navigation -->
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -26,44 +22,37 @@
         <a href="admission.html" class="active">Admission</a>
         <a href="contact.html">Contact</a>
       </nav>
-
-      <!-- Mobile Menu Button -->
       <button class="menu-toggle" aria-label="Open Menu" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero">
-    <img src="images/admissions-banner.png" alt="Admissions Banner" class="hero-bg" />
+    <img src="images/admissions-banner.png" alt="Admissions Banner" class="hero-bg">
     <div class="hero-inner container">
       <h1>Admission</h1>
-      <p class="lead">Start your journey with the Aweil School of Management & Business Studies.</p>
+      <p class="lead">Start your journey with the Aweil School of Management & Business.</p>
     </div>
   </section>
 
-  <!-- ADMISSION FORM SECTION -->
-  <main class="content-section container">
+  <!-- ADMISSION FORM -->
+  <section class="content-section container">
     <h2>Register for Admission</h2>
     <div class="admission-wrapper">
 
-      <!-- IMAGE SIDE -->
-      <figure class="admission-image">
+      <div class="admission-image">
         <img src="images/admissions-consultation.png" alt="Admissions Consultation" loading="lazy">
-      </figure>
+      </div>
 
-      <!-- FORM SIDE -->
       <form action="https://formsubmit.co/el/mogacu" method="POST" class="admission-form">
-        <!-- Hidden Config -->
         <input type="hidden" name="_subject" value="New Student Admission — Aweil School">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="box">
         <input type="hidden" name="_next" value="https://robodata74.github.io/aweil-business-school/thank-you.html">
 
-        <!-- Full Name -->
         <label for="student_name">Full Name</label>
         <input id="student_name" type="text" name="student_name" required>
 
-        <!-- Gender -->
         <label for="gender">Gender</label>
         <select id="gender" name="gender" required>
           <option value="">Select</option>
@@ -72,23 +61,18 @@
           <option>Prefer not to say</option>
         </select>
 
-        <!-- Age -->
         <label for="age">Age</label>
         <input id="age" type="number" name="age" min="10" required>
 
-        <!-- Phone -->
         <label for="phone">Phone</label>
         <input id="phone" type="tel" name="phone" required>
 
-        <!-- Email -->
         <label for="email">Email</label>
         <input id="email" type="email" name="email" required>
 
-        <!-- Address -->
         <label for="address">Address</label>
         <input id="address" type="text" name="address" required>
 
-        <!-- Programme -->
         <label for="program">Programme of Study</label>
         <select id="program" name="program" required>
           <option value="">Select Programme</option>
@@ -97,23 +81,19 @@
           <option>Professional</option>
         </select>
 
-        <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Submit Application</button>
       </form>
-
     </div>
-  </main>
+  </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© 2025 Aweil School of Management & Business Studies — Maper East, South Sudan</p>
-      <small>Contact: 09258841183</small>
+      <small>Contact: 0925884118</small>
     </div>
   </footer>
 
-  <!-- JS -->
   <script src="menu.js"></script>
-
 </body>
 </html>

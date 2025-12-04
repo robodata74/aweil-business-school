@@ -115,18 +115,16 @@ header.home-logo .logo {
     margin-bottom: 20px;
 }
 
-.hero-inner .cta a {
-    display: inline-block;
-    margin: 5px 10px;
-    padding: 12px 30px;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
+/* Buttons */
 .btn-primary {
     background-color: #FFD700;
     color: #5E1F4C;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-primary:hover {
@@ -136,6 +134,11 @@ header.home-logo .logo {
 .btn-outline {
     border: 2px solid #FFD700;
     color: #FFD700;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-outline:hover {
@@ -144,7 +147,7 @@ header.home-logo .logo {
 }
 
 /* =================================================
-   ABOUT & PROGRAMS SECTIONS
+   MAIN CONTAINER
 ================================================= */
 .container {
     width: 90%;
@@ -153,35 +156,51 @@ header.home-logo .logo {
     padding: 60px 0;
 }
 
-.about-grid,
-.cards-grid,
+/* =================================================
+   ABOUT & PROGRAMS ICONS
+================================================= */
 .icons-grid {
     display: grid;
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    text-align: center;
 }
 
-.about-grid {
-    grid-template-columns: 1fr 1fr;
+.icons-grid .icon {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.about-text h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+.icons-grid .icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.about-text p {
-    font-size: 1rem;
-    margin-bottom: 15px;
+.icons-grid .icon img {
+    width: 60px; /* Adjusted icon size for readability */
+    height: 60px;
+    margin-bottom: 10px;
 }
 
-.about-image img {
+.icons-grid .icon span {
     display: block;
-    margin: 0 auto;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
+/* =================================================
+   CARDS GRID (Programs / Admission / Courses)
+================================================= */
 .cards-grid {
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .card {
@@ -199,29 +218,13 @@ header.home-logo .logo {
 
 .card-icon {
     width: 80px;
+    height: 80px;
     margin: 0 auto 15px auto;
     display: block;
 }
 
 .card h3 {
     font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.icons-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    text-align: center;
-}
-
-.icons-grid .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.icons-grid .icon img {
-    width: 80px;
     margin-bottom: 10px;
 }
 
@@ -237,7 +240,7 @@ header.home-logo .logo {
 }
 
 /* =================================================
-   RESPONSIVE
+   RESPONSIVE DESIGN
 ================================================= */
 @media (max-width: 900px) {
     header .main-nav {
@@ -260,11 +263,6 @@ header.home-logo .logo {
         display: block;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
     .hero-inner h1 {
         font-size: 2rem;
     }
@@ -279,5 +277,9 @@ header.home-logo .logo {
     header.home-logo .logo {
         height: 45px;
         max-width: 160px;
+    }
+    
+    .icons-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }

@@ -2,113 +2,113 @@
 
 This repository contains the full static website for the Aweil School of Management and Business, hosted through GitHub Pages and using FormSubmit for inquiry and admission form processing.
 
-📂 Project Structure
+---
+
+## 📂 Project Structure
+
 root/
 │── index.html
 │── about.html
-│── programmes.html
+│── programs.html
 │── admission.html
 │── contact.html
 │── thank-you.html
 │── style.css
+│── menu.js
+│── script.js
 │── README.md
 │
 └── images/
-    └── (all uploaded school assets)
+└── (all uploaded school assets)
 
-🚀 Deploying on GitHub Pages
+yaml
+Copy code
+
+---
+
+## 🚀 Deploying on GitHub Pages
 
 Go to:
-Settings → Pages
+
+**Settings → Pages**
 
 Under Build and Deployment:
 
-Source → Deploy from branch
+- **Source:** Deploy from branch  
+- **Branch:** main  
+- **Folder:** / (root)
 
-Branch → main
+Click **Save**
 
-Folder → / (root)
-
-Click Save
-
-Your site becomes available at:
+Your site will appear at:
 
 https://YOUR-USERNAME.github.io/REPOSITORY-NAME/
 
-📝 Form Setup (FormSubmit)
+yaml
+Copy code
 
-The site uses FormSubmit for safe and backend-free form processing.
+---
 
-✔ Admission Form
+## 📝 Form Setup (FormSubmit)
 
-Located in: admission.html
-Submits to your endpoint:
+### ✔ Admission Form
+Located in: **admission.html**
 
-https://formsubmit.co/el/mogacu
-
-✔ Contact Form
-
-Located in: contact.html
-Also submits to:
+Submission endpoint:
 
 https://formsubmit.co/el/mogacu
 
-✔ Thank-You Redirect
+python
+Copy code
 
-Both forms can redirect after submission by adding:
+### ✔ Contact Form
+Located in: **contact.html**
 
+Also submits to same endpoint.
+
+### ✔ Redirect After Submission
+
+Add:
+
+```html
 <input type="hidden" name="_next" value="https://YOUR-USERNAME.github.io/REPOSITORY-NAME/thank-you.html">
+📧 Gmail CC Automation (No Code, Safe)
+To forward all form submissions to another email:
 
-📧 How to Enable Gmail CC for All Form Submissions
+Go to Gmail → Settings → See all settings
 
-Because FormSubmit does not support CC directly, you handle CC using Gmail filters.
-
-✅ Step-by-Step Gmail CC Setup
-
-Log into gmail.com
-
-Open Settings (⚙) → See All Settings
-
-Go to Filters and Blocked Addresses
+Open Filters and Blocked Addresses
 
 Click Create New Filter
 
-In Subject contains, enter:
+Under “Subject contains” enter:
 
-Website Inquiry — Aweil School
-
-
-(This subject is already built into our contact form.)
-
+nginx
+Copy code
+Aweil School
 Click Create Filter
 
 Check:
 
-✔ "Forward it to:"
+✔ “Forward it to:”
+Select → info@vadfoundation.org
 
-Choose → the CC email (info@vadfoundation.org)
-
-Save.
-
-Now every form submission automatically:
-➡ arrives in your Gmail
-➡ is forwarded to info@vadfoundation.org
-
-➡ without exposing that email in your website code
+Now all inquiries automatically forward.
 
 🛠 Technologies Used
-
 HTML5
 
 CSS3
 
 GitHub Pages
 
-FormSubmit (secure forms)
+FormSubmit
 
-Gmail filtering for CC automation
+Gmail Filter Automation
 
 📞 Contact
-
-Aweil School of Management and Business
+Aweil School of Management and Business Studies
 Maper East, Aweil, South Sudan
+
+yaml
+Copy code

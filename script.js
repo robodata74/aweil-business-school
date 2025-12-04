@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("VAD Foundation website loaded.");
+    console.log("Aweil School website loaded.");
 });

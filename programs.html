@@ -2,88 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programs | Aweil School of Management & Business Studies</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/favicon.ico">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo-clean.png" alt="Aweil School Logo" class="logo">
-      </div>
+<header>
+  <div class="container">
+    <img src="logo-clean.png" class="logo" alt="">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html" class="active">Programs</a>
+      <a href="admission.html">Admission</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="main-nav" aria-label="Main Navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="programs.html" class="active">Programs</a>
-        <a href="admission.html">Admission</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+<section class="page-header">
+  <div class="container">
+    <h1>Our Programs</h1>
+    <p>Quality academic and professional programs tailored for South Sudan’s future leaders.</p>
+  </div>
+</section>
 
-      <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+<section class="program-list">
+  <div class="container">
+
+    <div class="program-card">
+      <h3>Diploma in Business Administration</h3>
+      <p>A 2-year program designed to build solid management and administrative skills.</p>
     </div>
-  </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero" aria-label="Programs Hero Banner">
-    <img src="images/programmes-banner.png" alt="Programs Banner" class="hero-bg">
-    <div class="hero-inner container">
-      <h1>Our Programs</h1>
-      <p class="lead">Practical, professional, and career-focused courses for aspiring business leaders.</p>
+    <div class="program-card">
+      <h3>Diploma in Accounting & Finance</h3>
+      <p>Prepares students for careers in financial management, auditing, and banking.</p>
     </div>
-  </section>
 
-  <!-- PROGRAMS GRID -->
-  <section class="programmes-preview container">
-    <h2 class="section-title">Explore Our Programs</h2>
-
-    <div class="cards-grid">
-
-      <!-- Certificate -->
-      <article class="card">
-        <img src="images/programmes-certificate.png"
-             alt="Certificate Programs Icon"
-             class="card-icon"
-             loading="lazy">
-        <h3>Certificate Programs</h3>
-        <p>Short-term foundational courses designed for beginners and entry-level learners.</p>
-      </article>
-
-      <!-- Diploma -->
-      <article class="card">
-        <img src="images/diploma-business-management.png"
-             alt="Diploma Programs Icon"
-             class="card-icon"
-             loading="lazy">
-        <h3>Diploma Programs</h3>
-        <p>Comprehensive 1–2 year courses focusing on practical skills, leadership, and applied management.</p>
-      </article>
-
-      <!-- Professional -->
-      <article class="card">
-        <img src="images/prof-entrepreneurship.png"
-             alt="Professional Programs Icon"
-             class="card-icon"
-             loading="lazy">
-        <h3>Professional Programs</h3>
-        <p>Advanced courses for career acceleration, corporate specialization, and professional certifications.</p>
-      </article>
-
+    <div class="program-card">
+      <h3>Certificate in Entrepreneurship</h3>
+      <p>Equips learners with practical business startup and innovation skills.</p>
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Aweil School of Management & Business Studies — Maper East, South Sudan</p>
-      <small>Contact: 0925884118</small>
-    </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="menu.js"></script>
+<footer>
+  <p>© 2025 Aweil School of Management & Business Studies.</p>
+</footer>
+
 </body>
 </html>

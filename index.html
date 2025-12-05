@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO -->
-  <title>Aweil School of Management & Business Studies</title>
-  <meta name="description" content="Aweil School of Management & Business Studies offers quality business, management, and entrepreneurship programs for the next generation of South Sudanese leaders.">
-  <meta name="keywords" content="Aweil, Business School, Management, South Sudan, Education, Diploma, Certificate Programs">
-  <meta name="author" content="Aweil School of Management & Business Studies">
-
-  <!-- Social Sharing -->
-  <meta property="og:title" content="Aweil School of Management & Business Studies">
-  <meta property="og:image" content="logo-clean.png">
-  <meta property="og:description" content="Developing the next generation of business and management professionals in South Sudan.">
-  <meta property="og:type" content="website">
-
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home | Aweil School of Management & Business Studies</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <img src="logo-clean.png" alt="Aweil School Logo" class="logo" />
-      <nav>
-        <a href="index.html">Home</a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html"><img src="images/logo-clean.png" alt="Aweil School Logo" class="logo"></a>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
         <a href="admission.html">Admission</a>
         <a href="contact.html">Contact</a>
       </nav>
+
+      <button class="menu-toggle" aria-label="Open menu" id="menuToggle">☰</button>
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="container">
+    <img src="images/homepage-hero-4k.png" alt="Aweil School hero" class="hero-bg">
+    <div class="hero-inner container">
       <h1>Welcome to Aweil School of Management & Business Studies</h1>
-      <p>Building the next generation of business leaders in South Sudan.</p>
-      <a href="about.html" class="btn">Learn More</a>
-    </div>
-  </section>
-
-  <section class="services">
-    <div class="container">
-      <h2>What We Offer</h2>
-
-      <div class="service-grid">
-
-        <div class="service-card">
-          <img src="icons/briefcase.png" class="service-icon" alt="">
-          <h3>Business Programs</h3>
-          <p>Explore our diploma & certificate business courses.</p>
-          <a href="programs.html" class="read-more">Read More →</a>
-        </div>
-
-        <div class="service-card">
-          <img src="icons/team.png" class="service-icon" alt="">
-          <h3>Skilled Lecturers</h3>
-          <p>Our lecturers bring real-world experience to the classroom.</p>
-          <a href="about.html#team" class="read-more">Read More →</a>
-        </div>
-
-        <div class="service-card">
-          <img src="icons/admission.png" class="service-icon" alt="">
-          <h3>Simple Admission</h3>
-          <p>Fast and easy admission process for all students.</p>
-          <a href="admission.html" class="read-more">Read More →</a>
-        </div>
-
+      <p class="lead">Empowering students with leadership, management and business skills for a brighter future.</p>
+      <div class="cta">
+        <a href="admission.html" class="btn btn-primary">Apply Now</a>
+        <a href="about.html" class="btn btn-outline">Learn More</a>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Aweil School of Management & Business Studies. All rights reserved.</p>
+  <!-- WHY CHOOSE US -->
+  <section class="icons-grid container" aria-label="Why choose us">
+    <div class="icon home-first-icon">
+      <img src="images/icon-speed.png" alt="Fast learning icon">
+      <span>Fast Learning</span>
+    </div>
+
+    <div class="icon">
+      <img src="images/icon-support.png" alt="Student support icon">
+      <span>Student Support</span>
+    </div>
+
+    <div class="icon">
+      <img src="images/icon-security.png" alt="Secure campus icon">
+      <span>Secure Campus</span>
+    </div>
+
+    <div class="icon">
+      <img src="images/icon-loan.png" alt="Financial aid icon">
+      <span>Financial Aid</span>
+    </div>
+
+    <div class="icon">
+      <img src="images/icon-check.png" alt="Accredited programs icon">
+      <span>Accredited Programs</span>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Aweil School of Management & Business Studies — Maper East, South Sudan</p>
+      <small>Contact: 09258841183</small>
+    </div>
   </footer>
+
+  <script src="menu.js"></script>
 </body>
 </html>

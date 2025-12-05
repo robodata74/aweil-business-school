@@ -2,85 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | Aweil School of Management & Business Studies</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.ico">
 </head>
+
 <body>
 
   <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="images/logo.png" alt="Aweil School Logo" class="logo">
+        <img src="images/logo-clean.png" alt="Aweil School Logo" class="logo">
       </div>
-      <nav class="main-nav">
+
+      <nav class="main-nav" aria-label="Main Navigation">
         <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
         <a href="programs.html">Programs</a>
         <a href="admission.html">Admission</a>
         <a href="contact.html">Contact</a>
       </nav>
+
       <button class="menu-toggle" aria-label="Open Menu" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <img src="images/about-banner.png" alt="About Banner" class="hero-bg">
+    <img src="images/about-banner.png" alt="About School Banner" class="hero-bg">
     <div class="hero-inner container">
       <h1>About Us</h1>
       <p class="lead">Empowering students with leadership, management, and business skills for a brighter future.</p>
     </div>
   </section>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN SECTION -->
   <main class="content-section container">
 
-    <!-- School Overview -->
+    <!-- SCHOOL OVERVIEW -->
     <section class="about-grid">
-      <div class="about-text">
+
+      <!-- Mission + Vision Centered -->
+      <div class="about-text" style="text-align:center;">
         <h2>Our Mission</h2>
         <p>To provide quality education in management and business studies that fosters professional growth, ethical leadership, and societal impact.</p>
+
         <h2>Our Vision</h2>
         <p>To be the leading institution in South Sudan delivering excellence in education and nurturing future leaders in business and management.</p>
       </div>
+
       <div class="about-image">
-        <img src="images/about-school-campus.png" alt="School Campus" style="width:100%; max-width:550px; display:block; margin:0 auto;">
+        <img src="images/about-school-campus.png" alt="Aweil School Campus Building"
+             style="width:100%; max-width:550px; display:block; margin:0 auto;">
       </div>
     </section>
 
-    <!-- Learning & Leadership -->
+    <!-- CARDS -->
     <section class="cards-grid">
       <div class="card">
-        <img src="images/about-classroom-learning.png" alt="Classroom Learning" style="width:100%; max-width:300px; display:block; margin:0 auto 10px;">
+        <img src="images/about-classroom-learning.png" alt="Classroom Learning Setup"
+             style="width:100%; max-width:300px; display:block; margin:0 auto 10px;">
         <h3>Modern Learning</h3>
         <p>Interactive classrooms equipped with modern facilities to foster effective learning.</p>
       </div>
+
       <div class="card">
-        <img src="images/about-leadership-training.png" alt="Leadership Training" style="width:100%; max-width:300px; display:block; margin:0 auto 10px;">
+        <img src="images/about-leadership-training.png" alt="Leadership Training Session"
+             style="width:100%; max-width:300px; display:block; margin:0 auto 10px;">
         <h3>Leadership Skills</h3>
         <p>Programs designed to develop leadership and professional skills among students.</p>
       </div>
     </section>
 
-    <!-- Core Values / Icons -->
+    <!-- VALUES -->
     <section class="icons-grid">
       <div class="icon">
-        <img src="images/value-integrity.png" alt="Integrity">
+        <img src="images/value-integrity.png" alt="Integrity Icon">
         <span>Integrity</span>
       </div>
       <div class="icon">
-        <img src="images/icon-check.png" alt="Accredited Programs">
+        <img src="images/icon-check.png" alt="Accredited Programs Icon">
         <span>Accredited Programs</span>
       </div>
       <div class="icon">
-        <img src="images/icon-speed.png" alt="Innovation">
+        <img src="images/icon-speed.png" alt="Innovation Icon">
         <span>Innovation</span>
       </div>
       <div class="icon">
-        <img src="images/icon-support.png" alt="Student Support">
+        <img src="images/icon-support.png" alt="Student Support Icon">
         <span>Student Support</span>
       </div>
     </section>

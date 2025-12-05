@@ -1,92 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Aweil School of Management & Business Studies</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us | Aweil School of Management & Business Studies</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="Aweil School Logo" class="logo">
-      </div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="programs.html">Programs</a>
-        <a href="admission.html">Admission</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open Menu" onclick="toggleMenu()">☰</button>
+<header>
+  <div class="container">
+    <img src="logo-clean.png" alt="School Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="admission.html">Admission</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Reach out to our administrative office for inquiries or support.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container contact-grid">
+
+    <!-- LEFT SIDE: CONTACT INFORMATION -->
+    <div class="contact-info">
+      <h2>Our Office</h2>
+      <p><strong>Location:</strong> Maper East, Aweil, South Sudan</p>
+      <p><strong>Phone:</strong> 0925884118</p>
+      <p><strong>Email:</strong> aweil.school.management@gmail.com</p>
+
+      <img src="contact-map-aweil.png" alt="Map of Aweil" class="contact-map" />
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <img src="images/contact-banner.png" alt="Contact Banner" class="hero-bg">
-    <div class="hero-inner container">
-      <h1>Contact Us</h1>
-      <p class="lead">We are here to help. Reach out to us anytime.</p>
-    </div>
-  </section>
+    <!-- RIGHT SIDE: CONTACT FORM -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
 
-  <!-- CONTACT SECTION -->
-  <section class="content-section container">
-    <h2>Get in Touch</h2>
-    <div class="contact-wrapper">
+      <form action="https://formsubmit.co/your-email-here" method="POST">
 
-      <div class="contact-info">
-        <img src="images/contact-office-building.png" alt="Office Contact" loading="lazy">
-        <p>📍 Maper East, South Sudan</p>
-        <p>📞 0925884118</p>
-
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.013984308349!2d27.395!3d8.767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDYnMDMuMiJOIDI3wrAyMycyMS4wIkU!5e0!3m2!1sen!2s!4v1700000000000" 
-          width="100%" 
-          height="250" 
-          style="border:0; border-radius:10px; margin-top:15px;" 
-          allowfullscreen 
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <form action="https://formsubmit.co/el/mogacu" method="POST" class="contact-form">
-        <input type="hidden" name="_subject" value="Contact Form Submission — Aweil School">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="box">
         <input type="hidden" name="_next" value="https://robodata74.github.io/aweil-business-school/thank-you.html">
+        <input type="hidden" name="_subject" value="New Contact Request - Aweil School">
+        <input type="hidden" name="_captcha" value="false">
 
-        <label>Your Name</label>
-        <input type="text" name="name" required>
+        <label>Full Name</label>
+        <input type="text" name="Full Name" required />
 
         <label>Email</label>
-        <input type="email" name="email" required>
+        <input type="email" name="Email" required />
 
-        <label>Phone</label>
-        <input type="tel" name="phone">
+        <label>Phone Number</label>
+        <input type="text" name="Phone" />
 
         <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
+        <textarea name="Message" required></textarea>
 
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn">Send Message</button>
       </form>
-
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Aweil School of Management & Business Studies — Maper East, South Sudan</p>
-      <small>Contact: 0925884118</small>
-    </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="menu.js"></script>
+<footer>
+  <p>© 2025 Aweil School of Management & Business Studies — Maper East, South Sudan<br>
+  Contact: 0925884118</p>
+</footer>
+
 </body>
 </html>

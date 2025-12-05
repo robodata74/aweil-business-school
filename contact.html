@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Aweil School of Management & Business Studies</title>
+  <meta name="description" content="Get in touch with Aweil School of Management & Business Studies. Contact us for inquiries, admissions, and program information.">
+  <meta name="keywords" content="Aweil School, Contact, Admission, Programs, South Sudan, Business Studies">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.ico">
 </head>
@@ -15,7 +17,7 @@
       <div class="brand">
         <img src="images/logo-clean.png" alt="Aweil School Logo" class="logo">
       </div>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
@@ -26,8 +28,8 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Contact Hero Banner">
     <img src="images/contact-banner.png" alt="Contact Banner" class="hero-bg">
     <div class="hero-inner container">
       <h1>Contact Us</h1>
@@ -41,16 +43,15 @@
     <div class="contact-wrapper">
 
       <div class="contact-info">
-        <img src="images/contact-office-building.png" alt="Office Contact" loading="lazy">
+        <img src="images/contact-office-building.png" alt="Office Building" style="width:100%; max-width:400px; display:block; margin:0 auto 15px;" loading="lazy">
         <p>📍 Maper East, South Sudan</p>
         <p>📞 09258841183</p>
-
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.013984308349!2d27.395!3d8.767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDYnMDMuMiJOIDI3wrAyMycyMS4wIkU!5e0!3m2!1sen!2s!4v1700000000000" 
-          width="100%" 
-          height="250" 
-          style="border:0; border-radius:10px; margin-top:15px;" 
-          allowfullscreen 
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.013984308349!2d27.395!3d8.767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwNDYnMDMuMiJOIDI3wrAyMycyMS4wIkU!5e0!3m2!1sen!2s!4v1700000000000"
+          width="100%"
+          height="250"
+          style="border:0; border-radius:10px; margin-top:15px;"
+          allowfullscreen
           loading="lazy">
         </iframe>
       </div>
@@ -61,17 +62,17 @@
         <input type="hidden" name="_template" value="box">
         <input type="hidden" name="_next" value="https://robodata74.github.io/aweil-business-school/thank-you.html">
 
-        <label>Your Name</label>
-        <input type="text" name="name" required>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
 
-        <label>Email</label>
-        <input type="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-        <label>Phone</label>
-        <input type="tel" name="phone">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
 
-        <label>Message</label>
-        <textarea name="message" rows="5" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>

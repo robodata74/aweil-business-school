@@ -1,9 +1,7 @@
-// menu.js
-document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector(".main-nav");
+// menu.js — handles responsive menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.querySelector('.main-nav');
 
-    menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-    });
-});
+function toggleMenu() {
+  mainNav.classList.toggle('active');
+}

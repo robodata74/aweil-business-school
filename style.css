@@ -1,285 +1,106 @@
-/* =================================================
-   GLOBAL STYLES
-================================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
+/* UNIVERSAL IMPROVEMENTS */
 body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f5f5;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* =================================================
-   HEADER & LOGO
-================================================= */
-header {
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #5E1F4C;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-header .logo {
-    height: 60px;
-    max-width: 200px;
-    object-fit: contain;
-}
-
-header.home-logo .logo {
-    height: 70px;
-    max-width: 220px;
-}
-
-.main-nav a {
-    color: #fff;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    color: #FFD700;
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* =================================================
-   HERO SECTION
-================================================= */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-.hero-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    filter: brightness(70%);
-}
-
-.hero-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.hero-inner h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero-inner .lead {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
-
-/* Buttons */
-.btn-primary {
-    background-color: #FFD700;
-    color: #5E1F4C;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    opacity: 0.9;
-}
-
-.btn-outline {
-    border: 2px solid #FFD700;
-    color: #FFD700;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-outline:hover {
-    background-color: #FFD700;
-    color: #5E1F4C;
-}
-
-/* =================================================
-   MAIN CONTAINER
-================================================= */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* =================================================
-   ABOUT & PROGRAMS ICONS
-================================================= */
-.icons-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    text-align: center;
+/* HEADER */
+header {
+  background: #1f1f1f;
+  padding: 15px 0;
+}
+header .logo {
+  height: 70px;
+}
+header nav {
+  float: right;
+  margin-top: 25px;
+}
+header nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav a.active {
+  color: #ffd700;
 }
 
-.icons-grid .icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* HERO */
+.hero {
+  background: #003366;
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+.hero .btn {
+  background: #ffd700;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
 }
 
-.icons-grid .icon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+/* SERVICES */
+.service-grid {
+  display: flex;
+  gap: 20px;
+}
+.service-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
+.service-icon {
+  width: 60px;
+  margin-bottom: 10px;
 }
 
-.icons-grid .icon img {
-    width: 60px; /* Adjusted icon size for readability */
-    height: 60px;
-    margin-bottom: 10px;
+/* CENTER TEXT */
+.center-text {
+  text-align: center;
 }
 
-.icons-grid .icon span {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 500;
+/* PROGRAM LIST */
+.program-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
-/* =================================================
-   CARDS GRID (Programs / Admission / Courses)
-================================================= */
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+/* FORMS */
+.form-section form input,
+.form-section form select,
+.form-section form textarea {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-.card {
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    background-color: #fff;
+.btn {
+  background: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px auto;
-    display: block;
-}
-
-.card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-/* =================================================
-   FOOTER
-================================================= */
-.site-footer {
-    background: #5E1F4C;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 0.9rem;
-}
-
-/* =================================================
-   RESPONSIVE DESIGN
-================================================= */
-@media (max-width: 900px) {
-    header .main-nav {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background: #5E1F4C;
-        padding: 20px;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-    }
-
-    header .main-nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .hero-inner h1 {
-        font-size: 2rem;
-    }
-
-    .hero-inner .lead {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    header .logo,
-    header.home-logo .logo {
-        height: 45px;
-        max-width: 160px;
-    }
-    
-    .icons-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f1f1f;
+  color: #fff;
+  margin-top: 40px;
 }
